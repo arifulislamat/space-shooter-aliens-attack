@@ -1,5 +1,5 @@
 # space-shooter-aliens-attack
-I have developed this game a long time ago, i thought it a good idea to make it opensource, maybe newcomers find it interesting.
+I have developed this game a long time ago, i thought it is a good idea to make it opensource, maybe newcomers find it interesting.
 
 # Desktop build guide
 - Install Construct 2 ( look at engine dir)
