@@ -1,0 +1,1862 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Upgrade_Event</name>
+    <events>
+        <variable constant="0" name="UG_WingCannon" sid="595408860165923" static="0" type="text">Off</variable>
+        <variable constant="0" name="UG_Missile" sid="597807220147674" static="0" type="text">Off</variable>
+        <variable constant="0" name="UG_SpaceBoom" sid="764161025362342" static="0" type="text">Off</variable>
+        <variable constant="0" name="UG_Magnet" sid="541420189979558" static="0" type="text">Off</variable>
+        <variable comment="Requried Stars for upgrade Space Boom" constant="0" name="SB_UG_R_S" sid="381566645027344" static="0" type="number">2700</variable>
+        <variable comment="Requried Stars for upgrade Magnet" constant="0" name="MG_UG_R_S" sid="853507215660958" static="0" type="number">700</variable>
+        <variable comment="Requried Stars for upgrade Missile" constant="0" name="M_UG_R_S" sid="734028499896554" static="0" type="number">1800</variable>
+        <variable comment="Requried Stars for upgrade Wing Canoon" constant="0" name="WC_UG_R_S" sid="893363716303586" static="0" type="number">1000</variable>
+        <variable comment="Requried Stars for upgrade Main Cannon" constant="0" name="MC_UG_R_S" sid="329660664475369" static="0" type="number">400</variable>
+        <variable comment="Requried Stars for upgrade Space ship engine" constant="0" name="SSE_UG_R_S" sid="695002395593022" static="0" type="number">300</variable>
+        <variable comment="Sapce Ship Move Speed" constant="0" name="SSE_Speed" sid="459299795637416" static="0" type="number">450</variable>
+        <event-group description="" sid="491837970274131" title="LocalStorageUG">
+            <sub-events>
+                <event-block sid="270740341259366">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="348350561336474" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Check item exists" sid="479073041471178" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SS&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="731151557091053" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WC&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="221467858817309" type="LocalStorage">
+                            <param id="0" name="Key">&quot;M&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="992989338333914" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SB&quot;</param>
+                        </action>
+                        <action id="5" name="Check item exists" sid="565954975319191" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MG&quot;</param>
+                        </action>
+                        <action disabled="1" id="5" name="Check item exists" sid="458889412554526" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="116206313477746">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="608827811029679" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="112007425624731" type="System">
+                            <param id="0" name="Variable">Stored_Star</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="622647334118886">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="961063425671399" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WC&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="910300686394019" type="System">
+                            <param id="0" name="Variable">WingCannon</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="810630967153528" type="System">
+                            <param id="0" name="Variable">UG_WingCannon</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="701940267566324">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="594790519407553" type="LocalStorage">
+                            <param id="0" name="Key">&quot;M&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="696586358729029" type="System">
+                            <param id="0" name="Variable">Missile</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="577091333679177" type="System">
+                            <param id="0" name="Variable">UG_Missile</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="191269245713202">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="270144693833731" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SB&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="363549955949993" type="System">
+                            <param id="0" name="Variable">SpaceBoom</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="942623077349374" type="System">
+                            <param id="0" name="Variable">UG_SpaceBoom</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="100355992789976">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="992786981134370" type="LocalStorage">
+                            <param id="0" name="Key">&quot;MG&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="272010505480265" type="System">
+                            <param id="0" name="Variable">Magnet</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="796596743386866" type="System">
+                            <param id="0" name="Variable">UG_Magnet</param>
+                            <param id="1" name="Value">LocalStorage.ItemValue</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="541892280293343">
+                    <conditions>
+                        <condition id="9" name="On item exists" sid="796048150066510" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Get item" sid="154741741692567" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="739231173188879">
+                    <conditions>
+                        <condition id="1" name="On item get" sid="748984507204791" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="463473867244456" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                            <param id="1" name="Value">Wing_Cannon_Demage_Rate</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="425068037476470">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="174907625202089" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="198102587412822" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SS&quot;</param>
+                            <param id="1" name="Value">Stored_Star</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="399715254775578">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="909861726123305" type="System">
+                            <param id="0" name="Interval (seconds)">0.3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="349489955538552" type="LocalStorage">
+                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                            <param id="1" name="Value">Wing_Cannon_Demage_Rate</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="178822034804013">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="177640451920056" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="935140110997999">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="686993160234563" type="System">
+                            <param id="0" name="Variable">UG_WingCannon</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="721742141775276" type="WingCannonLook" />
+                        <action id="-15" name="Set visible" sid="558341601418758" type="WingCannon">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="302673614890926" type="Upgrade_Button3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="358260381477162" type="WC_UG_VALUE3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="719709470717805" type="WC_UG_TXT3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="415324031677966" type="SmallStar3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="269506167027689" type="SSE_UG_Button_click8" />
+                    </actions>
+                </event-block>
+                <event-block sid="963692173649352">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="796738358162717" type="System">
+                            <param id="0" name="Variable">UG_Missile</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="424794781587560" type="MissileLook" />
+                        <action id="-15" name="Set visible" sid="862780380655185" type="Missile4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="344073179490560" type="Upgrade_Button4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="260852648951488" type="M_UG_TXT4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="251347414748305" type="M_UG_VALUE4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="647585355078939" type="SmallStar4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="177225665163851" type="SSE_UG_Button_click9" />
+                    </actions>
+                </event-block>
+                <event-block sid="968306488395952">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="772891064626780" type="System">
+                            <param id="0" name="Variable">UG_SpaceBoom</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="944750944214185" type="SpaceBoomLook" />
+                        <action id="-15" name="Set visible" sid="342472959540272" type="SpaceBoom">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="426989006623848" type="Upgrade_Button5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="519610531327406" type="SB_UG_TXT5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="728317718945319" type="SB_UG_VALUE5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="167422358677534" type="SmallStar5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="112637259172616" type="SSE_UG_Button_click10" />
+                    </actions>
+                </event-block>
+                <event-block sid="813113604426601">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="718657064165072" type="System">
+                            <param id="0" name="Variable">UG_Magnet</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;On&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="769554041287640" type="MagnetLook" />
+                        <action id="-15" name="Set visible" sid="572672271749564" type="Magnet">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="793402913239652" type="Upgrade_Button6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="956134856579094" type="MG_UG_TXT6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="943587334948025" type="MG_UG_VALUE6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="150397373178783" type="SmallStar6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="801408729580769" type="SSE_UG_Button_click11" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="165301346541152" title="Space Ship Engine">
+            <sub-events>
+                <event-block sid="248940942023618">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="509808920258027" type="Keyboard">
+                            <param id="0" name="Key">97</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="435920463703953">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="745998085251484" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">SSE_UG_R_S</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="723800072275421" type="System">
+                                    <param id="0" name="Variable">SSE_Speed</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="303951191816267" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Value">SSE_UG_R_S</param>
+                                </action>
+                                <action id="0" name="Play" sid="101482408977002" type="Audio">
+                                    <param id="0" name="Audio file">ButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="520527914751494">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="284054197557419" type="Touch">
+                            <param id="0" name="Object">SSE_UG_Button_click</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="153650434168544">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="793098620024127" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">SSE_UG_R_S</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="961943589604860" type="System">
+                                    <param id="0" name="Variable">SSE_Speed</param>
+                                    <param id="1" name="Value">25</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="201483371694961" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Value">SSE_UG_R_S</param>
+                                </action>
+                                <action id="0" name="Play" sid="637196867781221" type="Audio">
+                                    <param id="0" name="Audio file">ButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="932961272229400">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="611666869508196" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">395</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="909071731637475" type="UG_Indicator">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="558387075003247" type="System">
+                            <param id="0" name="Variable">SSE_UG_R_S</param>
+                            <param id="1" name="Value">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="261956698430857">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="553878797833492" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">416</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="627436479585843" type="UG_Indicator2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="952372555697388" type="System">
+                            <param id="0" name="Variable">SSE_UG_R_S</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="116720872098263">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="949573195299552" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">437</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="184470961403517" type="UG_Indicator3">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="490320278256055" type="System">
+                            <param id="0" name="Variable">SSE_UG_R_S</param>
+                            <param id="1" name="Value">700</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="806516292285168">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="293324483974446" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">458</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="209248790458847" type="UG_Indicator4">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="492790901771604" type="System">
+                            <param id="0" name="Variable">SSE_UG_R_S</param>
+                            <param id="1" name="Value">1000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="106696643186455">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="507895317906432" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">479</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="301762376551069" type="UG_Indicator5">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="227077182904882" type="System">
+                            <param id="0" name="Variable">SSE_UG_R_S</param>
+                            <param id="1" name="Value">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="574768255083641">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="668828623124623" type="System">
+                            <param id="0" name="Variable">SSE_Speed</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">500</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="192085387820488" type="UG_Indicator6">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="877082349382277" type="SSE_UG_VALUE1" />
+                        <action id="-9" name="Destroy" sid="621306874614335" type="SmallStar1" />
+                        <action id="-9" name="Destroy" sid="716279182003914" type="SSE_UG_TXT1" />
+                        <action id="-15" name="Set visible" sid="899159065981420" type="FullUpgraded">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="184458667478979" type="SSE_UG_Button_click" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="497359129639567" title="Main Cannon">
+            <sub-events>
+                <event-block sid="927193441175346">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="339080317476446" type="Keyboard">
+                            <param id="0" name="Key">98</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="607981591240345">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="379748416642707" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">MC_UG_R_S</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="841777574431456" type="System">
+                                    <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Value">0.34</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="230694825746083" type="System">
+                                    <param id="0" name="Variable">Main_Cannon_Shooting_rate</param>
+                                    <param id="1" name="Value">- 0.025</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="726237214964151" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Value">MC_UG_R_S</param>
+                                </action>
+                                <action id="0" name="Play" sid="429433225362008" type="Audio">
+                                    <param id="0" name="Audio file">ButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="628685120431815">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="718898094871448" type="Touch">
+                            <param id="0" name="Object">SSE_UG_Button_click3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="841663115477758">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="856284300088422" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">MC_UG_R_S</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="219679359273655" type="System">
+                                    <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Value">0.34</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="426854678471687" type="System">
+                                    <param id="0" name="Variable">Main_Cannon_Shooting_rate</param>
+                                    <param id="1" name="Value">- 0.025</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="142159904409641" type="System">
+                                    <param id="0" name="Variable">Stored_Star</param>
+                                    <param id="1" name="Value">MC_UG_R_S</param>
+                                </action>
+                                <action id="0" name="Play" sid="799594801285966" type="Audio">
+                                    <param id="0" name="Audio file">ButtonClick</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="407848642515964">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="408021845267969" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.34</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="114627215125661" type="UG_Indicator7">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="388424341722555" type="System">
+                            <param id="0" name="Variable">MC_UG_R_S</param>
+                            <param id="1" name="Value">500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="654954899051265">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="605087299250441" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1.68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="324654941442085" type="UG_Indicator8">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="981159418575528" type="System">
+                            <param id="0" name="Variable">MC_UG_R_S</param>
+                            <param id="1" name="Value">600</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="715616646900938">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="658174418454556" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.02</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="803461200316473" type="UG_Indicator9">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="919683090720599" type="System">
+                            <param id="0" name="Variable">MC_UG_R_S</param>
+                            <param id="1" name="Value">900</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="689348743685036">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="509200691350032" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.36</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="270429162935763" type="UG_Indicator10">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="292762690891388" type="System">
+                            <param id="0" name="Variable">MC_UG_R_S</param>
+                            <param id="1" name="Value">1200</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="472133410299380">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="848259319511894" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">2.6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="811124326701697" type="UG_Indicator11">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="478012686006352" type="System">
+                            <param id="0" name="Variable">MC_UG_R_S</param>
+                            <param id="1" name="Value">1500</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="492436017852088">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="258890535072469" type="System">
+                            <param id="0" name="Variable">Main_Cannon_Demage_Rate</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="463104059627458" type="UG_Indicator12">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="168725393083126" type="MC_UG_VALUE2" />
+                        <action id="-9" name="Destroy" sid="490373119584774" type="SmallStar2" />
+                        <action id="-9" name="Destroy" sid="129574646097911" type="MC_UG_TXT2" />
+                        <action id="-15" name="Set visible" sid="514471567248646" type="FullUpgraded2">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="247108938362453" type="SSE_UG_Button_click3" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="495318903370437" title="Wing Cannon">
+            <sub-events>
+                <event-group description="" sid="519500319480995" title="Wing Cannon Unlock">
+                    <sub-events>
+                        <event-block sid="145817071755029">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="513280218853806" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click8</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="802504347692887">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="294357234039059" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">700</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="486556749711328" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">700</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="612029009244476" type="WingCannonLook" />
+                                        <action id="-15" name="Set visible" sid="551882726271577" type="WingCannon">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="707419198934994" type="Upgrade_Button3">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="797794569809242" type="System">
+                                            <param id="0" name="Variable">WingCannon</param>
+                                            <param id="1" name="Value">&quot;On&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="931861733680894" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;WC&quot;</param>
+                                            <param id="1" name="Value">WingCannon</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="641149587808400" type="WC_UG_VALUE3">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="709975807005354" type="WC_UG_TXT3">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="106414308669322" type="SmallStar3">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="167487580800849" type="SSE_UG_Button_click8" />
+                                        <action id="0" name="Play" sid="593008882619516" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="703840064673202" title="Wing Cannon UG">
+                    <sub-events>
+                        <event-block sid="872523361007475">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="246916135927759" type="Keyboard">
+                                    <param id="0" name="Key">99</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="388229933138992">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="417233552865374" type="System">
+                                            <param id="0" name="Variable">WingCannon</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="659398260213513" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">WC_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="114236951113564" type="System">
+                                            <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="348696478380804" type="System">
+                                            <param id="0" name="Variable">Wing_Cannon_Shooting_Rate</param>
+                                            <param id="1" name="Value">-0.3</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="433001680098161" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">WC_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="266828470161512" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                                            <param id="1" name="Value">Wing_Cannon_Demage_Rate</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="472586442150925" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="582213015536994">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="233082676014319" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="293171378842098">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="169628679095061" type="System">
+                                            <param id="0" name="Variable">WingCannon</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="699757212467290" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">WC_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="998265270049076" type="System">
+                                            <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="654754441759158" type="System">
+                                            <param id="0" name="Variable">Wing_Cannon_Shooting_Rate</param>
+                                            <param id="1" name="Value">-0.3</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="628329537898736" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">WC_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="480997879264707" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;WCDR&quot;</param>
+                                            <param id="1" name="Value">Wing_Cannon_Demage_Rate</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="584662103631415" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="756567342910680">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="415384312016493" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="705148470070703" type="UG_Indicator13">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="625787993763438" type="System">
+                                    <param id="0" name="Variable">WC_UG_R_S</param>
+                                    <param id="1" name="Value">1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="720304854348392">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="503555303813708" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="195631638684245" type="UG_Indicator14">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="785998721689677" type="System">
+                                    <param id="0" name="Variable">WC_UG_R_S</param>
+                                    <param id="1" name="Value">2000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="486511102009177">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="192849492721207" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="993930141254211" type="UG_Indicator15">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="708443082456819" type="System">
+                                    <param id="0" name="Variable">WC_UG_R_S</param>
+                                    <param id="1" name="Value">2200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="360601905938098">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="246711527081048" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="895136520965971" type="UG_Indicator16">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="667490565075137" type="System">
+                                    <param id="0" name="Variable">WC_UG_R_S</param>
+                                    <param id="1" name="Value">2500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="301975766690030">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="788446166969571" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">5.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="345474878003913" type="UG_Indicator17">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="235587468521329" type="System">
+                                    <param id="0" name="Variable">WC_UG_R_S</param>
+                                    <param id="1" name="Value">3000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="588583399264053">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="256513495561349" type="System">
+                                    <param id="0" name="Variable">Wing_Cannon_Demage_Rate</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="288435010518918" type="UG_Indicator18">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="292394146754505" type="WC_UG_TXT3" />
+                                <action id="-9" name="Destroy" sid="575286052977169" type="SmallStar3" />
+                                <action id="-9" name="Destroy" sid="796629271027878" type="WC_UG_VALUE3" />
+                                <action id="-15" name="Set visible" sid="961259491455933" type="FullUpgraded3">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="877339766893704" type="SSE_UG_Button_click4" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="170032268737491" title="Missile">
+            <sub-events>
+                <event-group description="" sid="815251768789314" title="Missile Unlock">
+                    <sub-events>
+                        <event-block sid="825897309683569">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="611634303263184" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="649949562946541">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="532049502110167" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="504312071541946" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">1500</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="370717613741031" type="MissileLook" />
+                                        <action id="-15" name="Set visible" sid="119924533807694" type="Missile4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="125520962570941" type="Upgrade_Button4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="407597699089075" type="System">
+                                            <param id="0" name="Variable">Missile</param>
+                                            <param id="1" name="Value">&quot;On&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="377749268939394" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;M&quot;</param>
+                                            <param id="1" name="Value">Missile</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="274205884308512" type="M_UG_TXT4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="314281919360338" type="M_UG_VALUE4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="247445483603137" type="SmallStar4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="182694816628251" type="SSE_UG_Button_click9" />
+                                        <action id="0" name="Play" sid="462224535279699" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="235250729511160" title="Missile UG">
+                    <sub-events>
+                        <event-block sid="321883827367241">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="176946623903071" type="Keyboard">
+                                    <param id="0" name="Key">100</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="570585013449581">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="582931719727229" type="System">
+                                            <param id="0" name="Variable">Missile</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="825792127106911" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">M_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="112576765205581" type="System">
+                                            <param id="0" name="Variable">MissileLife</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="170655144646760" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">M_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="140635475043957" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="771621389869250">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="615396732736455" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click5</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="163723868339646">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="874451651641908" type="System">
+                                            <param id="0" name="Variable">Missile</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="523890664873764" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">M_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="429986778945772" type="System">
+                                            <param id="0" name="Variable">MissileLife</param>
+                                            <param id="1" name="Value">0.5</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="666485303088702" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">M_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="738881017108300" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="377082180740644">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="472749293559272" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="216396513520533" type="UG_Indicator19">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="144760446351349" type="System">
+                                    <param id="0" name="Variable">M_UG_R_S</param>
+                                    <param id="1" name="Value">2500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="488801417056282">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="202413303177784" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="830257552706873" type="UG_Indicator20">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="357482111458073" type="System">
+                                    <param id="0" name="Variable">M_UG_R_S</param>
+                                    <param id="1" name="Value">2700</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="128803190651453">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="419648614309115" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="109612048396672" type="UG_Indicator21">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="977723929717848" type="System">
+                                    <param id="0" name="Variable">M_UG_R_S</param>
+                                    <param id="1" name="Value">3000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="734778222084701">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="771131730259533" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="905710166247465" type="UG_Indicator22">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="568715190232459" type="System">
+                                    <param id="0" name="Variable">M_UG_R_S</param>
+                                    <param id="1" name="Value">3500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="278384924223458">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="181747793473533" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="430577304969126" type="UG_Indicator23">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="616262356512706" type="System">
+                                    <param id="0" name="Variable">M_UG_R_S</param>
+                                    <param id="1" name="Value">4000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="464006732642702">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="757699663205300" type="System">
+                                    <param id="0" name="Variable">MissileLife</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="340695749813598" type="UG_Indicator24">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="892651855453524" type="M_UG_TXT4" />
+                                <action id="-9" name="Destroy" sid="251252879700889" type="SmallStar4" />
+                                <action id="-9" name="Destroy" sid="356213033623401" type="M_UG_VALUE4" />
+                                <action id="-15" name="Set visible" sid="453532647928291" type="FullUpgraded4">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="157912961842483" type="SSE_UG_Button_click5" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="885632530500731" title="Space Boom">
+            <sub-events>
+                <event-group description="" sid="591034889069719" title="Space Boom Unlock">
+                    <sub-events>
+                        <event-block sid="559879010595546">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="883863462186672" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="863418178534583">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="969686368405833" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="498773688393552" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">2500</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="755746652959204" type="SpaceBoomLook" />
+                                        <action id="-15" name="Set visible" sid="525303513802471" type="SpaceBoom">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="724937267125059" type="Upgrade_Button5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="182510758229422" type="System">
+                                            <param id="0" name="Variable">SpaceBoom</param>
+                                            <param id="1" name="Value">&quot;On&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="938296330422575" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;SB&quot;</param>
+                                            <param id="1" name="Value">SpaceBoom</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="486861984130869" type="SB_UG_TXT5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="727909293065558" type="SB_UG_VALUE5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="465490097516260" type="SmallStar5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="290929684956832" type="SSE_UG_Button_click10" />
+                                        <action id="0" name="Play" sid="827343373999049" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="544269648743389" title="Space Boom Upgrade">
+                    <sub-events>
+                        <event-block sid="542312523257755">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="845613310286812" type="Keyboard">
+                                    <param id="0" name="Key">101</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="930469077581263">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="611287944939710" type="System">
+                                            <param id="0" name="Variable">SpaceBoom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="211457141898679" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">SB_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="826864465629842" type="System">
+                                            <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                            <param id="1" name="Value">50</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="185366453083755" type="System">
+                                            <param id="0" name="Variable">SB_Bullet_Acceleration</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="351543033287911" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">SB_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="502064841551512" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="503626388218414">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="457342279393076" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="724126688622374">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="660713225225247" type="System">
+                                            <param id="0" name="Variable">SpaceBoom</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="233599432057863" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">SB_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="970239444171761" type="System">
+                                            <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                            <param id="1" name="Value">50</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="772796004889603" type="System">
+                                            <param id="0" name="Variable">SB_Bullet_Acceleration</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="909054902158521" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">SB_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="201338343934199" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="425209633678826">
+                            <conditions>
+                                <condition id="-19" name="On destroyed" sid="941897253563306" type="SSE_UG_Button_click10" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="803445580573199">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="730365608123642" type="System">
+                                            <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">250</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="669814639887361" type="UG_Indicator25">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="436303606600490" type="System">
+                                            <param id="0" name="Variable">SB_UG_R_S</param>
+                                            <param id="1" name="Value">2900</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="889299904741944">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="417039697267005" type="System">
+                                    <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">300</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="280616128289391" type="UG_Indicator26">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="888710320309381" type="System">
+                                    <param id="0" name="Variable">SB_UG_R_S</param>
+                                    <param id="1" name="Value">3000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="260068533601548">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="121602287143878" type="System">
+                                    <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">350</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="917223002528148" type="UG_Indicator27">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="931300042467087" type="System">
+                                    <param id="0" name="Variable">SB_UG_R_S</param>
+                                    <param id="1" name="Value">3200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="660287263890644">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="486374554093936" type="System">
+                                    <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="621165055920171" type="UG_Indicator28">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="574638905706742" type="System">
+                                    <param id="0" name="Variable">SB_UG_R_S</param>
+                                    <param id="1" name="Value">3500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="555317682780107">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="269937800806437" type="System">
+                                    <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">450</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="791269931216787" type="UG_Indicator29">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="791390500642858" type="System">
+                                    <param id="0" name="Variable">SB_UG_R_S</param>
+                                    <param id="1" name="Value">4000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="693236592260182">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="110998422356654" type="System">
+                                    <param id="0" name="Variable">SB_Bullet_Speed</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="146447871017137" type="UG_Indicator30">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="194343148317193" type="SB_UG_TXT5" />
+                                <action id="-9" name="Destroy" sid="379069326929915" type="SmallStar5" />
+                                <action id="-9" name="Destroy" sid="267582528526113" type="SB_UG_VALUE5" />
+                                <action id="-15" name="Set visible" sid="738140242798565" type="FullUpgraded5">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="450955801155073" type="SSE_UG_Button_click6" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="660166003985355" title="Magnet..">
+            <sub-events>
+                <event-group description="" sid="858218815418712" title="Magnet Unlock">
+                    <sub-events>
+                        <event-block sid="924338317344217">
+                            <conditions>
+                                <condition id="17" name="On tap object" sid="258309226601879" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click11</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="955783607099811">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="365485934203592" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">500</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-11" name="Subtract from" sid="860799576599450" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">500</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="641672478016129" type="MagnetLook" />
+                                        <action id="-15" name="Set visible" sid="796244106831119" type="Magnet">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="218744720167025" type="Upgrade_Button6">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="622589493366911" type="System">
+                                            <param id="0" name="Variable">Magnet</param>
+                                            <param id="1" name="Value">&quot;On&quot;</param>
+                                        </action>
+                                        <action id="0" name="Set item" sid="136248931379246" type="LocalStorage">
+                                            <param id="0" name="Key">&quot;MG&quot;</param>
+                                            <param id="1" name="Value">Magnet</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="663264716874618" type="MG_UG_TXT6">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="900020117144711" type="MG_UG_VALUE6">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="703552096670979" type="SmallStar6">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="471142236309513" type="SSE_UG_Button_click11" />
+                                        <action id="0" name="Play" sid="784557935615488" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="674320766824421" title="Magnet Upgrade">
+                    <sub-events>
+                        <event-block sid="281349378530846">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="710620679562556" type="Keyboard">
+                                    <param id="0" name="Key">98</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="617488493263776">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="556054385986847" type="System">
+                                            <param id="0" name="Variable">Magnet</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="139100164130981" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">MG_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="737485292587531" type="System">
+                                            <param id="0" name="Variable">Star_LOS_Range</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="961730557986157" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">MG_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="483485716268728" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="268965226252075">
+                            <conditions>
+                                <condition id="3" name="On touched object" sid="504148120948371" type="Touch">
+                                    <param id="0" name="Object">SSE_UG_Button_click7</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="490981886675862">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="305871703406511" type="System">
+                                            <param id="0" name="Variable">Magnet</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">&quot;On&quot;</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="826539851665020" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">MG_UG_R_S</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="857785194088234" type="System">
+                                            <param id="0" name="Variable">Star_LOS_Range</param>
+                                            <param id="1" name="Value">100</param>
+                                        </action>
+                                        <action id="-11" name="Subtract from" sid="215988371413911" type="System">
+                                            <param id="0" name="Variable">Stored_Star</param>
+                                            <param id="1" name="Value">MG_UG_R_S</param>
+                                        </action>
+                                        <action id="0" name="Play" sid="694314244677749" type="Audio">
+                                            <param id="0" name="Audio file">ButtonClick</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="962449583933523">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="852916675951133" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">400</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="766553607676547" type="UG_Indicator31">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="806492371589991" type="System">
+                                    <param id="0" name="Variable">MG_UG_R_S</param>
+                                    <param id="1" name="Value">800</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="815320070965999">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="863711156737729" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">500</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="172362562392988" type="UG_Indicator32">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="358872872780629" type="System">
+                                    <param id="0" name="Variable">MG_UG_R_S</param>
+                                    <param id="1" name="Value">900</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="413659926918013">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="953913932322410" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">600</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="290267167630206" type="UG_Indicator33">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="881432567841230" type="System">
+                                    <param id="0" name="Variable">MG_UG_R_S</param>
+                                    <param id="1" name="Value">1000</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="832804175850388">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="684976573849000" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">700</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="895893507440860" type="UG_Indicator34">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="479089859964423" type="System">
+                                    <param id="0" name="Variable">MG_UG_R_S</param>
+                                    <param id="1" name="Value">1200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="230837888533257">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="616877485394258" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">800</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="928800984099369" type="UG_Indicator35">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="529239580465977" type="System">
+                                    <param id="0" name="Variable">MG_UG_R_S</param>
+                                    <param id="1" name="Value">1500</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="747340825847105">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="941463134551703" type="System">
+                                    <param id="0" name="Variable">Star_LOS_Range</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">900</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="831660313569465" type="UG_Indicator36">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="579430618396801" type="MG_UG_TXT6" />
+                                <action id="-9" name="Destroy" sid="681030202213075" type="SmallStar6" />
+                                <action id="-9" name="Destroy" sid="844228909575866" type="MG_UG_VALUE6" />
+                                <action id="-15" name="Set visible" sid="118101363509827" type="FullUpgraded6">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="858834712476940" type="SSE_UG_Button_click11" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="344170085627141" title="Others">
+            <sub-events>
+                <event-block sid="804739854828121">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="358970036239773" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="556881432210633" type="OnlyStar">
+                            <param id="0" name="Y">self.Y +0.5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="914890749729636" type="Star_txt">
+                            <param id="0" name="Text">Stored_Star</param>
+                        </action>
+                        <action id="0" name="Set text" sid="110678709991006" type="SSE_UG_VALUE1">
+                            <param id="0" name="Text">SSE_UG_R_S</param>
+                        </action>
+                        <action id="0" name="Set text" sid="483677537777797" type="MC_UG_VALUE2">
+                            <param id="0" name="Text">MC_UG_R_S</param>
+                        </action>
+                        <action id="0" name="Set text" sid="978695699691184" type="WC_UG_VALUE3">
+                            <param id="0" name="Text">WC_UG_R_S</param>
+                        </action>
+                        <action id="0" name="Set text" sid="701490397502751" type="M_UG_VALUE4">
+                            <param id="0" name="Text">M_UG_R_S</param>
+                        </action>
+                        <action id="0" name="Set text" sid="801564103845491" type="SB_UG_VALUE5">
+                            <param id="0" name="Text">SB_UG_R_S</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="522558785637810">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="384277753463786" type="OnlyStar">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">1920</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="904289638797787" type="OnlyStar">
+                            <param id="0" name="Y">-640</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="577536828649493">
+                    <conditions>
+                        <condition id="18" name="On double-tap object" sid="903854551869661" type="Touch">
+                            <param id="0" name="Object">BigStar</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="411093786262821" type="System">
+                            <param id="0" name="Variable">Stored_Star</param>
+                            <param id="1" name="Value">10000</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297289769043637">
+                    <conditions>
+                        <condition id="3" name="On touched object" sid="106946376106391" type="Touch">
+                            <param id="0" name="Object">BackButton</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-36" name="Save" sid="884617411808573" type="System">
+                            <param id="0" name="Slot">&quot;UGSave&quot;</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="661892346987493" type="System">
+                            <param id="0" name="Layout">Main menu</param>
+                        </action>
+                        <action id="0" name="Play" sid="393188336393625" type="Audio">
+                            <param id="0" name="Audio file">BackButton</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="972486613864138">
+            <conditions>
+                <condition id="2" name="Key is down" sid="777049962487295" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-36" name="Save" sid="507650925804191" type="System">
+                    <param id="0" name="Slot">&quot;UGSave&quot;</param>
+                </action>
+                <action id="0" name="Play" sid="627972088065789" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="752832972954191" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="367161005873596" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="659844226736956">
+            <conditions>
+                <condition id="3" name="Is button down" sid="875360358546778" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">6</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="194615904969494" type="System">
+                    <param id="0" name="Variable">Stored_Star</param>
+                    <param id="1" name="Value">10000</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

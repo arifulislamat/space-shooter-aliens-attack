@@ -1,0 +1,9 @@
+﻿License type: BUSINESS
+Product: Construct 2
+Licensed to: Ariful Islam
+Email: arifulislamat@gmail.com
+Comment: With best wishes from Figgler [mrfiggler@gmail.com]
+Timestamp: 1612188235
+Hash: 3F8420A76A3B9433B04DCF34BA4443C7161B838CF4838D729
+
+This is PRIVATE license. Please TURN OFF "UPDATE CHECKING" in C2 preferences BEFORE USE!!!

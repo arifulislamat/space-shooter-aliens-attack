@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SYM_Event</name>
+    <events>
+        <event-block sid="761671989018481">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="594007946573823" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="288065019609254" type="OnlyStar">
+                    <param id="0" name="Y">self.Y +0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="219427916715123">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="328393003423339" type="OnlyStar">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1920</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="169340883691773" type="OnlyStar">
+                    <param id="0" name="Y">-640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="605833042384308">
+            <conditions>
+                <condition id="3" name="On touched object" sid="207786262482877" type="Touch">
+                    <param id="0" name="Object">MarsOnly</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="307628649064623" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="839946354868281" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="348043577964737" type="System">
+                    <param id="0" name="Layout">SYP_Mars</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="682905743924714">
+            <conditions>
+                <condition id="3" name="On touched object" sid="827839627760505" type="Touch">
+                    <param id="0" name="Object">JupiterOnly</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="584490224105665" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="547436681117043" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="455592670333725" type="System">
+                    <param id="0" name="Layout">SYP_Jupiter</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="888708244943645">
+            <conditions>
+                <condition id="3" name="On touched object" sid="924398759055073" type="Touch">
+                    <param id="0" name="Object">BackButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="882309077093861" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="462707614857567" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="682291429459275" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="175581121542992">
+            <conditions>
+                <condition id="2" name="Key is down" sid="960642669043709" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="775397675903941" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="849609354125442" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="168015708327499" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="556787248109324">
+            <conditions>
+                <condition id="3" name="Is button down" sid="642244156746806" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="380395194766593" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="568101437973700" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="797937095479121" type="System">
+                    <param id="0" name="Layout">SYP_Mars</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="426743776900450">
+            <conditions>
+                <condition id="3" name="Is button down" sid="694338845925959" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="802601728699420" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="958381448405953" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="587361796393127" type="System">
+                    <param id="0" name="Layout">SYP_Jupiter</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="965708613571912">
+            <conditions>
+                <condition id="3" name="Is button down" sid="837656121841707" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="178404014887307" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="472116227732811" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="731612657011256" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="953591959863776">
+            <conditions>
+                <condition id="2" name="Key is down" sid="318707209251452" type="Keyboard">
+                    <param id="0" name="Key">77</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="753421353061055" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="123848268705425" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="644776042184942" type="System">
+                    <param id="0" name="Layout">SYP_Mars</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="344087531457376">
+            <conditions>
+                <condition id="2" name="Key is down" sid="793652024352548" type="Keyboard">
+                    <param id="0" name="Key">74</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="729021313364745" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="373125391610870" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="901184367018744" type="System">
+                    <param id="0" name="Layout">SYP_Jupiter</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

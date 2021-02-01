@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="1">Game</layout>
+        <layout order="3">Main menu</layout>
+        <layout order="6">Upgrade</layout>
+        <layout order="8">Loader</layout>
+        <event-sheet order="0">SYP_Jupiter_Event</event-sheet>
+        <event-sheet order="2">Game Event</event-sheet>
+        <event-sheet order="4">Main Menu Event</event-sheet>
+        <event-sheet order="5">Upgrade_Event</event-sheet>
+        <event-sheet order="7">Loader_Event</event-sheet>
+        <event-sheet order="9">About_Event</event-sheet>
+        <event-sheet order="10">SYP_Mars_Event</event-sheet>
+        <event-sheet active="1" order="11">SYM_Event</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Enemy" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/Effect/" />
+        <folder expanded="0" path="object-folder/Enemy/" />
+        <folder expanded="1" path="object-folder/Enemy/Boss/" />
+        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="1" path="object-folder/Menu/Golobal/" />
+        <folder expanded="0" path="object-folder/Menu/Main Menu/" />
+        <folder expanded="1" path="object-folder/Menu/SYM/" />
+        <folder expanded="1" path="object-folder/Menu/SYP_Mars/" />
+        <folder expanded="1" path="object-folder/Menu/SYP_Jupiter/" />
+        <folder expanded="0" path="object-folder/Game/" />
+        <folder expanded="0" path="object-folder/Player/" />
+        <folder expanded="0" path="object-folder/HUB/" />
+        <folder expanded="1" path="object-folder/Bullet/" />
+        <folder expanded="0" path="object-folder/Power_Up/" />
+        <folder expanded="1" path="object-folder/Paused Menu/" />
+        <folder expanded="0" path="object-folder/Enemy_Spawner/" />
+        <folder expanded="1" path="object-folder/Plugin/" />
+        <folder expanded="0" path="object-folder/About/" />
+        <folder expanded="0" path="object-folder/Loader/" />
+        <folder expanded="1" path="object-folder/Upgrade/" />
+        <folder expanded="0" path="object-folder/Upgrade/UpgradeButton/" />
+        <folder expanded="0" path="object-folder/Upgrade/UpgradeIndicator/" />
+        <folder expanded="1" path="object-folder/Upgrade/FullUg/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="0" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Explosion/" />
+        <folder expanded="1" path="animation-folder/Explosion_2/" />
+        <folder expanded="1" path="animation-folder/Explosion_3/" />
+        <folder expanded="1" path="animation-folder/FireCracker/" />
+        <folder expanded="1" path="animation-folder/FireCracker_2/" />
+        <folder expanded="1" path="animation-folder/FireCracker_3/" />
+        <folder expanded="1" path="animation-folder/Cannon_M_F/" />
+        <folder expanded="1" path="animation-folder/Gun_M_F/" />
+        <folder expanded="1" path="animation-folder/Trust/" />
+        <folder expanded="1" path="animation-folder/RedExplosion/" />
+        <folder expanded="1" path="animation-folder/Boss1/" />
+        <folder expanded="1" path="animation-folder/Enemy1/" />
+        <folder expanded="1" path="animation-folder/Enemy2/" />
+        <folder expanded="1" path="animation-folder/Enemy3/" />
+        <folder expanded="1" path="animation-folder/Enemy4/" />
+        <folder expanded="1" path="animation-folder/Blade/" />
+        <folder expanded="1" path="animation-folder/CMC_Ship/" />
+        <folder expanded="1" path="animation-folder/BackButton/" />
+        <folder expanded="1" path="animation-folder/BG_All_menu/" />
+        <folder expanded="1" path="animation-folder/OnlyStar/" />
+        <folder expanded="1" path="animation-folder/SYPText/" />
+        <folder expanded="1" path="animation-folder/Button_Effect_Whit/" />
+        <folder expanded="1" path="animation-folder/Exit_Button/" />
+        <folder expanded="1" path="animation-folder/Info_Button/" />
+        <folder expanded="1" path="animation-folder/Play_Button/" />
+        <folder expanded="1" path="animation-folder/Setting_Button/" />
+        <folder expanded="1" path="animation-folder/Trophy/" />
+        <folder expanded="1" path="animation-folder/Space_shooter_text/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button/" />
+        <folder expanded="1" path="animation-folder/JupiterOnly/" />
+        <folder expanded="1" path="animation-folder/Mars/" />
+        <folder expanded="1" path="animation-folder/SYMText2/" />
+        <folder expanded="1" path="animation-folder/MarsOnly/" />
+        <folder expanded="1" path="animation-folder/Deimons/" />
+        <folder expanded="1" path="animation-folder/Phobos/" />
+        <folder expanded="1" path="animation-folder/OnlyMars/" />
+        <folder expanded="1" path="animation-folder/OnlyMarsText/" />
+        <folder expanded="1" path="animation-folder/Callisto/" />
+        <folder expanded="1" path="animation-folder/Ganymede/" />
+        <folder expanded="1" path="animation-folder/Io/" />
+        <folder expanded="1" path="animation-folder/Europa/" />
+        <folder expanded="1" path="animation-folder/JupiterOnly2/" />
+        <folder expanded="1" path="animation-folder/JupiterText/" />
+        <folder expanded="1" path="animation-folder/Meteors/" />
+        <folder expanded="1" path="animation-folder/Player/" />
+        <folder expanded="1" path="animation-folder/PlayerICON/" />
+        <folder expanded="1" path="animation-folder/ScoreBar/" />
+        <folder expanded="1" path="animation-folder/HealthBar2/" />
+        <folder expanded="1" path="animation-folder/HealthBarBoder/" />
+        <folder expanded="1" path="animation-folder/BlackShadow/" />
+        <folder expanded="1" path="animation-folder/HealthBarBoss/" />
+        <folder expanded="1" path="animation-folder/HealthBarBoder2/" />
+        <folder expanded="1" path="animation-folder/Laser/" />
+        <folder expanded="1" path="animation-folder/EnemyLaser/" />
+        <folder expanded="1" path="animation-folder/Cannon_Laser/" />
+        <folder expanded="1" path="animation-folder/Missile/" />
+        <folder expanded="1" path="animation-folder/BigLaserBeam/" />
+        <folder expanded="1" path="animation-folder/bullet/" />
+        <folder expanded="1" path="animation-folder/fire_laser/" />
+        <folder expanded="1" path="animation-folder/Shield/" />
+        <folder expanded="1" path="animation-folder/StarCoin/" />
+        <folder expanded="1" path="animation-folder/ShieldSymbol/" />
+        <folder expanded="1" path="animation-folder/LifeSymbol/" />
+        <folder expanded="1" path="animation-folder/HomeIcon/" />
+        <folder expanded="1" path="animation-folder/PushButton/" />
+        <folder expanded="1" path="animation-folder/PlayIcon/" />
+        <folder expanded="1" path="animation-folder/RestartIcon/" />
+        <folder expanded="1" path="animation-folder/PausedMenuBG/" />
+        <folder expanded="1" path="animation-folder/UpgradeIcon/" />
+        <folder expanded="1" path="animation-folder/Paused_Txt/" />
+        <folder expanded="1" path="animation-folder/PausedTXTBG/" />
+        <folder expanded="1" path="animation-folder/YouLoseTxt/" />
+        <folder expanded="1" path="animation-folder/YouWinTxt/" />
+        <folder expanded="1" path="animation-folder/Enemy_movement/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_1/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_2/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_3/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_4/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_5/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_6/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_8/" />
+        <folder expanded="1" path="animation-folder/Enemy_spawner_Z/" />
+        <folder expanded="1" path="animation-folder/Enemy_spwaner_10/" />
+        <folder expanded="1" path="animation-folder/Enemy_spwaner_7/" />
+        <folder expanded="1" path="animation-folder/Communication_spawner/" />
+        <folder expanded="1" path="animation-folder/Enemy_spwaner_9/" />
+        <folder expanded="1" path="animation-folder/Boss_Spawner/" />
+        <folder expanded="1" path="animation-folder/About_TXT/" />
+        <folder expanded="1" path="animation-folder/Facebook/" />
+        <folder expanded="1" path="animation-folder/Google/" />
+        <folder expanded="1" path="animation-folder/twitter/" />
+        <folder expanded="1" path="animation-folder/Instagram/" />
+        <folder expanded="1" path="animation-folder/Youtube/" />
+        <folder expanded="1" path="animation-folder/ArmanSoft/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button1/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button2/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button3/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button4/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button5/" />
+        <folder expanded="1" path="animation-folder/Upgrade_Button6/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator2/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator3/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator4/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator5/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator6/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator7/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator8/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator9/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator10/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator11/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator12/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator13/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator14/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator15/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator16/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator17/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator18/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator19/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator20/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator21/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator22/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator23/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator24/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator25/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator26/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator27/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator28/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator29/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator30/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator31/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator32/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator33/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator34/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator35/" />
+        <folder expanded="1" path="animation-folder/UG_Indicator36/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded2/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded3/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded4/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded5/" />
+        <folder expanded="1" path="animation-folder/FullUpgraded6/" />
+        <folder expanded="1" path="animation-folder/Magnet/" />
+        <folder expanded="1" path="animation-folder/MainCannon/" />
+        <folder expanded="1" path="animation-folder/Missile4/" />
+        <folder expanded="1" path="animation-folder/SpaceBoom/" />
+        <folder expanded="1" path="animation-folder/SpaceShipEngine/" />
+        <folder expanded="1" path="animation-folder/WingCannon/" />
+        <folder expanded="1" path="animation-folder/BigStar/" />
+        <folder expanded="1" path="animation-folder/StarBG/" />
+        <folder expanded="1" path="animation-folder/UpgradeMenuText/" />
+        <folder expanded="1" path="animation-folder/SmallStar1/" />
+        <folder expanded="1" path="animation-folder/ButtonShadow/" />
+        <folder expanded="1" path="animation-folder/MagnetLook/" />
+        <folder expanded="1" path="animation-folder/MissileLook/" />
+        <folder expanded="1" path="animation-folder/SpaceBoomLook/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click/" />
+        <folder expanded="1" path="animation-folder/WingCannonLook/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click3/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click4/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click5/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click6/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click7/" />
+        <folder expanded="1" path="animation-folder/SmallStar2/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click8/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click9/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click10/" />
+        <folder expanded="1" path="animation-folder/SSE_UG_Button_click11/" />
+        <folder expanded="1" path="animation-folder/SmallStar3/" />
+        <folder expanded="1" path="animation-folder/SmallStar4/" />
+        <folder expanded="1" path="animation-folder/SmallStar5/" />
+        <folder expanded="1" path="animation-folder/SmallStar6/" />
+        <folder expanded="1" path="animation-folder/Missile3/" />
+        <folder expanded="1" path="animation-folder/SpaceBoom2/" />
+        <folder expanded="1" path="animation-folder/SpaceBoomIcon/" />
+        <folder expanded="1" path="animation-folder/WhiteStar/" />
+        <folder expanded="1" path="animation-folder/BGNEw/" />
+        <folder expanded="1" path="animation-folder/PlayerShipHit_Effect/" />
+        <folder expanded="1" path="animation-folder/Boss06Hit/" />
+        <folder expanded="1" path="animation-folder/Star_UI/" />
+        <folder expanded="1" path="animation-folder/PlayerShipHit_Effect2/" />
+    </folders-expanded>
+</c2uistate>

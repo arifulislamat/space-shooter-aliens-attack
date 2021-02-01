@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>About_Event</name>
+    <events>
+        <event-block sid="293379233490275">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="214994921637495" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="283731666943408" type="OnlyStar">
+                    <param id="0" name="Y">self.Y +0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="875633551923926">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="522807386036415" type="OnlyStar">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1920</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="516454112371465" type="OnlyStar">
+                    <param id="0" name="Y">-640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="127175550096189">
+            <conditions>
+                <condition id="3" name="On touched object" sid="765769168400694" type="Touch">
+                    <param id="0" name="Object">BackButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="973458989217230" type="System">
+                    <param id="0" name="Seconds">0.6</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="390790386207660" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+                <action id="0" name="Play" sid="615273522342728" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="957797960313464">
+            <conditions>
+                <condition id="2" name="Key is down" sid="218777041308221" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="374507514517454" type="System">
+                    <param id="0" name="Seconds">0.6</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="463871786676123" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+                <action id="0" name="Play" sid="759585904044294" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="862560660992127">
+            <conditions>
+                <condition id="17" name="On tap object" sid="275236250682704" type="Touch">
+                    <param id="0" name="Object">Facebook</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="715261625296754" type="Browser">
+                    <param id="0" name="URL">&quot;https://www.facebook.com/arifulislamat98&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="329112021174796">
+            <conditions>
+                <condition id="17" name="On tap object" sid="799478314415392" type="Touch">
+                    <param id="0" name="Object">Instagram</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="115105923794680" type="Browser">
+                    <param id="0" name="URL">&quot;https://www.instagram.com/arifulislamat/&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="685137872061845">
+            <conditions>
+                <condition id="17" name="On tap object" sid="923630925660961" type="Touch">
+                    <param id="0" name="Object">Youtube</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="639496179797669">
+            <conditions>
+                <condition id="17" name="On tap object" sid="449884456946652" type="Touch">
+                    <param id="0" name="Object">twitter</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="885763546623039" type="Browser">
+                    <param id="0" name="URL">&quot;https://twitter.com/arifulislamat&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="583443420313525">
+            <conditions>
+                <condition id="17" name="On tap object" sid="246912358786637" type="Touch">
+                    <param id="0" name="Object">Google</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="922124776877992" type="Browser">
+                    <param id="0" name="URL">&quot;https://plus.google.com/u/0/+MuhammadArifulIslam&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="899329922423405">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="929127341417872" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Show banner ad" sid="416228372399890" type="AdmobAds">
+                    <param id="0" name="Position">4</param>
+                    <param id="1" name="Size">0</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="577435655161008" type="System">
+                    <param id="0" name="X">360</param>
+                </action>
+                <action id="-6" name="Scroll to Y" sid="546912706284989" type="System">
+                    <param id="0" name="Y">640</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

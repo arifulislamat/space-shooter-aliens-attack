@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Loader_Event</name>
+    <events>
+        <include>Upgrade_Event</include>
+        <event-block sid="436233767283702">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="716293133387285" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="947817304631324" type="LoadingBar">
+                    <param id="0" name="Width">round(loadingprogress)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="688218770569024">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="498896916174845" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="167536186006163" type="System">
+                    <param id="0" name="Layout">Main menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="132634339367467">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="430231300351753" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="979563154498747" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SS&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="723778716106458" type="LocalStorage">
+                    <param id="0" name="Key">&quot;WC&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="443914241555810" type="LocalStorage">
+                    <param id="0" name="Key">&quot;M&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="113528941192648" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SB&quot;</param>
+                </action>
+                <action id="5" name="Check item exists" sid="697627035205999" type="LocalStorage">
+                    <param id="0" name="Key">&quot;MG&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="990971797763403">
+            <conditions>
+                <condition id="9" name="On item exists" sid="343040169164518" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="702885826450504" type="System">
+                    <param id="0" name="Variable">Stored_Star</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="906244148252043">
+            <conditions>
+                <condition id="9" name="On item exists" sid="577187940503903" type="LocalStorage">
+                    <param id="0" name="Key">&quot;WC&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="387339993233296" type="System">
+                    <param id="0" name="Variable">WingCannon</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="-9" name="Set value" sid="898526890996374" type="System">
+                    <param id="0" name="Variable">UG_WingCannon</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="848671535571890">
+            <conditions>
+                <condition id="9" name="On item exists" sid="133148488248923" type="LocalStorage">
+                    <param id="0" name="Key">&quot;M&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="474861777117041" type="System">
+                    <param id="0" name="Variable">Missile</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="-9" name="Set value" sid="464210469291460" type="System">
+                    <param id="0" name="Variable">UG_Missile</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="985764346487909">
+            <conditions>
+                <condition id="9" name="On item exists" sid="138287733978666" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SB&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="771299233291780" type="System">
+                    <param id="0" name="Variable">SpaceBoom</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="-9" name="Set value" sid="459954593705461" type="System">
+                    <param id="0" name="Variable">UG_SpaceBoom</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="972602070076083">
+            <conditions>
+                <condition id="9" name="On item exists" sid="956704812085160" type="LocalStorage">
+                    <param id="0" name="Key">&quot;MG&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="487724824893854" type="System">
+                    <param id="0" name="Variable">Magnet</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+                <action id="-9" name="Set value" sid="111046241218925" type="System">
+                    <param id="0" name="Variable">UG_Magnet</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

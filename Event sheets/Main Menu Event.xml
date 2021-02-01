@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main Menu Event</name>
+    <events>
+        <variable constant="0" name="MM_HighScore" sid="810143780933347" static="0" type="number">0</variable>
+        <event-block sid="761956802105608">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="363290844882494" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="472651029785643" type="OnlyStar">
+                    <param id="0" name="Y">self.Y +0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="146325879323097">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="342828124454406" type="OnlyStar">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1920</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="880676634876132" type="OnlyStar">
+                    <param id="0" name="Y">-640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164588112687328">
+            <conditions>
+                <condition id="3" name="On touched object" sid="934426746480580" type="Touch">
+                    <param id="0" name="Object">Play_Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="905299941280999" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="602881792307109" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="836958537199228" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="808154788814558">
+            <conditions>
+                <condition id="3" name="On touched object" sid="910584544195997" type="Touch">
+                    <param id="0" name="Object">Upgrade_Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="425998177356693" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-37" name="Load" sid="841984684761082" type="System">
+                    <param id="0" name="Slot">&quot;UGSave&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="309852210955961" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="262304355435710" type="System">
+                    <param id="0" name="Layout">Upgrade</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="360246578320659">
+            <conditions>
+                <condition id="3" name="On touched object" sid="822672903499697" type="Touch">
+                    <param id="0" name="Object">Exit_Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="409010734192790" type="Browser" />
+                <action id="0" name="Play" sid="890885187972994" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="282013654152062">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="157822359578023" type="System">
+                            <param id="0" name="Interval (seconds)">0.1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set item" sid="521210159255532" type="LocalStorage">
+                            <param id="0" name="Key">&quot;SS&quot;</param>
+                            <param id="1" name="Value">Stored_Star</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="515148737019430">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="871475693548849" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="590336624041255" type="LocalStorage">
+                    <param id="0" name="Key">&quot;HS&quot;</param>
+                </action>
+                <action id="0" name="Show banner ad" sid="178754806123000" type="AdmobAds">
+                    <param id="0" name="Position">7</param>
+                    <param id="1" name="Size">0</param>
+                </action>
+                <action id="-5" name="Scroll to X" sid="779056546793357" type="System">
+                    <param id="0" name="X">360</param>
+                </action>
+                <action id="-6" name="Scroll to Y" sid="554150301629804" type="System">
+                    <param id="0" name="Y">640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="130748662218980">
+            <conditions>
+                <condition id="9" name="On item exists" sid="164856845740833" type="LocalStorage">
+                    <param id="0" name="Key">&quot;HS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Get item" sid="930150398327396" type="LocalStorage">
+                    <param id="0" name="Key">&quot;HS&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752049223642496">
+            <conditions>
+                <condition id="1" name="On item get" sid="809060850958689" type="LocalStorage">
+                    <param id="0" name="Key">&quot;HS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="495885418046195" type="System">
+                    <param id="0" name="Variable">MM_HighScore</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="995066336438124">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="767435039295411" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="230499586992785" type="highscore2">
+                    <param id="0" name="Text">&quot;High Score : &quot;&amp;MM_HighScore</param>
+                </action>
+                <action id="0" name="Set text" sid="913518398168784" type="Star_txt">
+                    <param id="0" name="Text">&quot;Star Collected : &quot;&amp;Stored_Star</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="512938448957655">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="312143313185858" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Check item exists" sid="462146531794546" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SS&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="849480863964356">
+            <conditions>
+                <condition id="9" name="On item exists" sid="758762525594540" type="LocalStorage">
+                    <param id="0" name="Key">&quot;SS&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="681552566413364" type="System">
+                    <param id="0" name="Variable">Stored_Star</param>
+                    <param id="1" name="Value">LocalStorage.ItemValue</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="340214985155402">
+            <conditions>
+                <condition id="17" name="On tap object" sid="262605384119067" type="Touch">
+                    <param id="0" name="Object">Info_Button</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="759554824493123" type="System">
+                    <param id="0" name="Layout">About</param>
+                </action>
+                <action id="0" name="Play" sid="605561753211389" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="749664110676762">
+            <conditions>
+                <condition id="2" name="Key is down" sid="629654669410974" type="Keyboard">
+                    <param id="0" name="Key">191</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="765431081882474" type="System">
+                    <param id="0" name="Layout">About</param>
+                </action>
+                <action id="0" name="Play" sid="354517510635659" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="791256613951764">
+            <conditions>
+                <condition id="2" name="Key is down" sid="197447639955756" type="Keyboard">
+                    <param id="0" name="Key">67</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="877700714929900" type="Browser" />
+                <action id="0" name="Play" sid="711990956162593" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="983600003756840">
+            <conditions>
+                <condition id="2" name="Key is down" sid="401062299027674" type="Keyboard">
+                    <param id="0" name="Key">80</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="649986506601762" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="974331420528978" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="539172981271418" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="679644815475982">
+            <conditions>
+                <condition id="2" name="Key is down" sid="715375438966315" type="Keyboard">
+                    <param id="0" name="Key">85</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="215346239219618" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-37" name="Load" sid="835134767255202" type="System">
+                    <param id="0" name="Slot">&quot;UGSave&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="829812686771865" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="880191586611945" type="System">
+                    <param id="0" name="Layout">Upgrade</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="922650512613999">
+            <conditions>
+                <condition id="3" name="Is button down" sid="358502133681363" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="152278081347760" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="829343385468246" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="952475832309537" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483325082172538">
+            <conditions>
+                <condition id="3" name="Is button down" sid="137560914806753" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="154146202361960" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-37" name="Load" sid="667720712653103" type="System">
+                    <param id="0" name="Slot">&quot;UGSave&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="454236367485880" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="118565593177516" type="System">
+                    <param id="0" name="Layout">Upgrade</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="580412321898952">
+            <conditions>
+                <condition id="3" name="Is button down" sid="326308901596231" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="328684995624416" type="System">
+                    <param id="0" name="Layout">About</param>
+                </action>
+                <action id="0" name="Play" sid="294026151269560" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752331436982459">
+            <conditions>
+                <condition id="3" name="Is button down" sid="476686724293102" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Close" sid="158906421344667" type="Browser" />
+                <action id="0" name="Play" sid="212089150842639" type="Audio">
+                    <param id="0" name="Audio file">ButtonClick</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

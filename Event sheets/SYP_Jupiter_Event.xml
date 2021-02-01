@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>SYP_Jupiter_Event</name>
+    <events>
+        <event-block sid="199371998593768">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="129598797699094" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="554915575626747" type="OnlyStar">
+                    <param id="0" name="Y">self.Y +0.5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="236128471023489">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="322228204971383" type="OnlyStar">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Y co-ordinate">1920</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="134363079842012" type="OnlyStar">
+                    <param id="0" name="Y">-640</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="988426533659425">
+            <conditions>
+                <condition id="3" name="On touched object" sid="125632284412398" type="Touch">
+                    <param id="0" name="Object">BackButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="966309229530998" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="216436791443135" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="892106819378355" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="717634557677688">
+            <conditions>
+                <condition id="2" name="Key is down" sid="934219950877939" type="Keyboard">
+                    <param id="0" name="Key">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="732427756115234" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="106725581065150" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="710744284163772" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="816798032355753">
+            <conditions>
+                <condition id="3" name="Is button down" sid="154867717186257" type="Gamepad">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="921895537656487" type="Audio">
+                    <param id="0" name="Audio file">BackButton</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="631574399717765" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="178378126822697" type="System">
+                    <param id="0" name="Layout">SYM</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="289404355418166">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="762585435573846" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Show interstitial" sid="788858953398014" type="AdmobAds" />
+                <action id="-5" name="Scroll to X" sid="795230993427082" type="System">
+                    <param id="0" name="X">360</param>
+                </action>
+                <action id="-6" name="Scroll to Y" sid="246598756380042" type="System">
+                    <param id="0" name="Y">640</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
