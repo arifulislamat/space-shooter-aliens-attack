@@ -1,13 +1,13 @@
-# space-shooter-aliens-attack
+# space-shooter-aliens-attack 🚀
 I have developed this game a long time ago, i thought it is a good idea to make it opensource, maybe newcomers find it interesting.
 
-# Desktop build guide
+# Desktop build guide 🖥
 - Install Construct 2 ( look at engine dir)
 - Add the licence 
 - Install [nwjs](https://www.scirra.com/nwjs)
 - Contruct 2 > Export > Desktop 
 
-# Android build guide 
+# Android build guide 📱 
 
 - Export your project from construct 2 with cordova 
 - Install Java [JDK 8](https://www.openlogic.com/openjdk-downloads?field_java_parent_version_target_id=All&field_operating_system_target_id=All&field_architecture_target_id=All&field_java_package_target_id=All&page=1)
