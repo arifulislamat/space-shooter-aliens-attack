@@ -14,6 +14,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="3">Main menu</layout>
         <layout order="6">Upgrade</layout>
         <layout order="8">Loader</layout>
+        <layout active="1" order="12">SYM</layout>
         <event-sheet order="0">SYP_Jupiter_Event</event-sheet>
         <event-sheet order="2">Game Event</event-sheet>
         <event-sheet order="4">Main Menu Event</event-sheet>
@@ -21,12 +22,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <event-sheet order="7">Loader_Event</event-sheet>
         <event-sheet order="9">About_Event</event-sheet>
         <event-sheet order="10">SYP_Mars_Event</event-sheet>
-        <event-sheet active="1" order="11">SYM_Event</event-sheet>
+        <event-sheet order="11">SYM_Event</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
         <property expanded="1" name="Project settings" />
-        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Window Size" />
         <property expanded="1" name="Configuration Settings" />
     </properties>
     <families-expanded root="1">
@@ -37,23 +38,23 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/Effect/" />
         <folder expanded="0" path="object-folder/Enemy/" />
         <folder expanded="1" path="object-folder/Enemy/Boss/" />
-        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="0" path="object-folder/Menu/" />
         <folder expanded="1" path="object-folder/Menu/Golobal/" />
         <folder expanded="0" path="object-folder/Menu/Main Menu/" />
-        <folder expanded="1" path="object-folder/Menu/SYM/" />
-        <folder expanded="1" path="object-folder/Menu/SYP_Mars/" />
-        <folder expanded="1" path="object-folder/Menu/SYP_Jupiter/" />
-        <folder expanded="0" path="object-folder/Game/" />
+        <folder expanded="0" path="object-folder/Menu/SYM/" />
+        <folder expanded="0" path="object-folder/Menu/SYP_Mars/" />
+        <folder expanded="0" path="object-folder/Menu/SYP_Jupiter/" />
+        <folder expanded="1" path="object-folder/Game/" />
         <folder expanded="0" path="object-folder/Player/" />
         <folder expanded="0" path="object-folder/HUB/" />
         <folder expanded="1" path="object-folder/Bullet/" />
         <folder expanded="0" path="object-folder/Power_Up/" />
         <folder expanded="1" path="object-folder/Paused Menu/" />
-        <folder expanded="0" path="object-folder/Enemy_Spawner/" />
+        <folder expanded="1" path="object-folder/Enemy_Spawner/" />
         <folder expanded="1" path="object-folder/Plugin/" />
         <folder expanded="0" path="object-folder/About/" />
         <folder expanded="0" path="object-folder/Loader/" />
-        <folder expanded="1" path="object-folder/Upgrade/" />
+        <folder expanded="0" path="object-folder/Upgrade/" />
         <folder expanded="0" path="object-folder/Upgrade/UpgradeButton/" />
         <folder expanded="0" path="object-folder/Upgrade/UpgradeIndicator/" />
         <folder expanded="1" path="object-folder/Upgrade/FullUg/" />
@@ -96,6 +97,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Mars/" />
         <folder expanded="1" path="animation-folder/SYMText2/" />
         <folder expanded="1" path="animation-folder/MarsOnly/" />
+        <folder expanded="1" path="animation-folder/Mars2/" />
         <folder expanded="1" path="animation-folder/Deimons/" />
         <folder expanded="1" path="animation-folder/Phobos/" />
         <folder expanded="1" path="animation-folder/OnlyMars/" />
@@ -150,6 +152,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Communication_spawner/" />
         <folder expanded="1" path="animation-folder/Enemy_spwaner_9/" />
         <folder expanded="1" path="animation-folder/Boss_Spawner/" />
+        <folder expanded="1" path="animation-folder/Enemy_spwaner_11/" />
         <folder expanded="1" path="animation-folder/About_TXT/" />
         <folder expanded="1" path="animation-folder/Facebook/" />
         <folder expanded="1" path="animation-folder/Google/" />
@@ -244,5 +247,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Boss06Hit/" />
         <folder expanded="1" path="animation-folder/Star_UI/" />
         <folder expanded="1" path="animation-folder/PlayerShipHit_Effect2/" />
+        <folder expanded="1" path="animation-folder/PlayIcon2/" />
+        <folder expanded="1" path="animation-folder/GrayShow/" />
     </folders-expanded>
 </c2uistate>

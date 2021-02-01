@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.armansoft.spaceshooter</app-id>
     <unique-id>bjc8ilzho3h6</unique-id>
-    <saved-with-version>27900</saved-with-version>
+    <saved-with-version>24500</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -42,8 +42,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>720</width>
-        <height>1280</height>
+        <width>1920</width>
+        <height>1080</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -1101,7 +1101,7 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="904155164775530" speed="5">
-                            <frame duration="1" hotspotX="0.509353" hotspotY="0.467391" original-source="C:\Users\ARIFUL ISLAM\Pictures\Space Shooter Assets\UI\SYM\Mars &amp; Jupiter Text.png" />
+                            <frame duration="1" hotspotX="0.490284" hotspotY="0.462766" original-source="C:\Users\ARIFUL ISLAM\Pictures\Space Shooter Assets\UI\SYM\Mars &amp; Jupiter Text.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1126,6 +1126,14 @@
                                     <point x="1" y="1" />
                                 </collision-poly>
                             </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Mars2" sid="890324004907809">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842294614717201" speed="5">
+                            <frame duration="1" hotspotX="0.492086" hotspotY="0.48731" original-source="C:\Users\ARIFUL ISLAM\Pictures\Space Shooter Assets\UI\SYM\Mars &amp; Jupiter Text.png" />
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1293,10 +1301,6 @@
             </object-folder>
         </object-folder>
         <object-folder name="Game">
-            <object-type name="GameBGStar" sid="436467471158812">
-                <plugin id="TiledBg" />
-                <texture original-source="C:\Users\ARIFUL ISLAM\Pictures\Space Shooter Assets\Background\_1080 1920_ 3.jpg" />
-            </object-type>
             <object-type name="Meteors" sid="167721159068190">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -2483,6 +2487,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Enemy_spwaner_11" sid="584102629129635">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="653788273830737" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Plugin">
             <object-type name="Mouse" sid="585066626235698">
@@ -3456,6 +3468,33 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="402767160459922" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.504425" original-source="C:\Users\ARIFUL ISLAM\Pictures\Space Shooter Assets\AirShip\Animation\PlayerShipHit_Effect.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayIcon2" sid="662554238962607">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="414971381234983" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Anonymous\Pictures\Play Icon.png">
+                        <collision-poly>
+                            <point x="0.146484" y="0.146484" />
+                            <point x="0.5" y="0" />
+                            <point x="0.853516" y="0.146484" />
+                            <point x="1" y="0.5" />
+                            <point x="0.853516" y="0.853516" />
+                            <point x="0.5" y="1" />
+                            <point x="0.146484" y="0.853516" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GrayShow" sid="393854274421130">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877643118620742" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
