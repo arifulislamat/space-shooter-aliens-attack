@@ -1,2 +1,4 @@
 # space-shooter-aliens-attack
-Construct 2 Games
+#Landscape and two player mode
+
+You will need two joystick
